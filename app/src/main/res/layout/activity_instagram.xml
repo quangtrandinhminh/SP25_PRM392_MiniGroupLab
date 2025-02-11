@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/instagram_gradient_background"
+    tools:context=".InstagramActivity"
+    >
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_instagram_5000x2167"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintBottom_toTopOf="@id/llGroupInput"
+        />
+
+    <LinearLayout
+        android:id="@+id/llGroupInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <EditText
+            android:id="@+id/etEmailOrPhone"
+            android:hint="@string/username"
+            style="@style/instagram_et"
+            />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            style="@style/instagram_et"
+            android:layout_marginTop="@dimen/spacing_medium"
+            app:layout_constraintTop_toBottomOf="@+id/etEmailOrPhone" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:text="@string/login"
+            style="@style/instagram_button"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llGroupForgotPassword"
+        style="@style/viewParent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:layout_constraintTop_toBottomOf="@+id/llGroupInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:text="@string/instagram_forgot"
+            style="@style/instagram_text"
+            />
+        <TextView
+            android:id="@+id/tvGetHelp"
+            android:text="@string/instagram_get_help"
+            style="@style/instagram_text"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llOr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:layout_constraintTop_toBottomOf="@+id/llGroupForgotPassword"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <View style="@style/instagram_view"/>
+        <TextView
+            android:id="@+id/tvOr"
+            android:text="OR"
+            style="@style/instagram_text"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="5dp"
+            />
+        <View style="@style/instagram_view"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/llGroupFacebook"
+        style="@style/viewParent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:layout_constraintTop_toBottomOf="@+id/llOr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ImageView
+            android:id="@+id/imgFacebook"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_facebook"
+            android:layout_marginEnd="5dp"
+            />
+
+        <TextView
+            android:id="@+id/tvLoginFacebook"
+            android:text="@string/instagram_login_facebook"
+            style="@style/instagram_text"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llGroupSignUp"
+        style="@style/instagram_bg"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <TextView
+            android:id="@+id/tvNoAccount"
+            android:text="@string/instagram_no_account"
+            style="@style/instagram_text"
+            />
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:text="@string/instagram_sign_up"
+            style="@style/instagram_text"
+            android:layout_marginStart="5dp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

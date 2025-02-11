@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/llParentVertical"
+    android:background="@color/facebook_background"
+    tools:context=".FacebookActivity_LL">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        style="@style/facebook_logo"
+        />
+
+    <LinearLayout
+        style="@style/llParentHorizontal"
+        android:layout_marginBottom="54dp"
+        >
+        <TextView
+            android:id="@+id/tvLanguage"
+            style="@style/facebook_language_tv"
+            android:text="@string/language"
+            android:layout_marginHorizontal="@dimen/padding_small"
+            />
+
+        <View
+            android:id="@+id/view"
+            style="@style/facebook_view"
+            />
+
+        <TextView
+            android:id="@+id/tvChange"
+            style="@style/facebook_language_tv"
+            android:text="@string/change_language"
+            android:textColor="@android:color/white"
+            android:layout_marginHorizontal="@dimen/padding_small"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:id="@+id/etEmailOrPhone"
+            style="@style/facebook_input"
+            android:hint="@string/email_or_phone"
+            android:layout_marginHorizontal="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_small"
+            />
+
+        <EditText
+            android:id="@+id/etPassword"
+            style="@style/facebook_input"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_marginHorizontal="@dimen/spacing_large"
+            />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/facebook_btn"
+            android:layout_marginHorizontal="@dimen/spacing_large"
+            android:text="@string/login"
+            android:layout_marginTop="@dimen/spacing_medium"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:text="@string/facebook_sign_up"
+        style="@style/facebook_tv"
+        android:layout_marginTop="90dp"
+        />
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:text="@string/forgot_password"
+        style="@style/facebook_tv"
+        android:layout_marginTop="@dimen/spacing_large"
+        />
+
+    <ImageView
+        android:id="@+id/imgHelpIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="40dp"
+        android:src="@drawable/ic_help_outline"
+        />
+
+</LinearLayout>

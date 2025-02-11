@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Lab1</string>
+    <string name="username">Username</string>
+    <string name="email_or_phone">Email or Phone</string>
+    <string name="password">Password</string>
+    <string name="login">Log In</string>
+    <string name="facebook_sign_up">Sign Up for Facebook</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="change_language">Change</string>
+    <string name="language">English</string>
+    <string name="instagram_forgot">Forgot your login details?</string>
+    <string name="instagram_get_help">Get help logging in.</string>
+    <string name="instagram_login_facebook">Log in with Facebook</string>
+    <string name="instagram_no_account">Dont have an account?</string>
+    <string name="instagram_sign_up">Sign up</string>
+</resources>

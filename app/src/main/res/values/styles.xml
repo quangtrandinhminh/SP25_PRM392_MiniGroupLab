@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="viewParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="llParentVertical" parent="viewParent">
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="llParentHorizontal" parent="viewParent">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="facebook_screenParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/facebook_background</item>
+    </style>
+
+    <!--Square image view logo -->
+    <style name="facebook_logo" parent="viewParent">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">60dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:src">@drawable/ic_facebook</item>
+    </style>
+
+
+
+    <style name="facebook_language_tv" parent="viewParent">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/facebook_font_color</item>
+    </style>
+
+    <!--facebook view dot-->
+    <style name="facebook_view">
+        <item name="android:layout_width">3dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="facebook_tv" parent="viewParent">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+    <style name="facebook_btn" parent="parent">
+        <item name="android:padding">@dimen/padding_medium</item>
+        <item name="android:textSize">@dimen/font_size</item>
+        <item name="android:textColor">@color/facebook_font_color</item>
+        <item name="android:backgroundTint">@color/facebook_button_blue</item>
+        <item name="marginHorizontal">@dimen/spacing_large</item>
+    </style>
+
+    <style name="facebook_label" parent="viewParent">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+    <style name="facebook_input" parent="facebook_btn">
+        <item name="android:backgroundTint">@color/facebook_font_color</item>
+        <item name="android:textColorHint">@color/facebook_font_color</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="instagram_et" parent="instagram_bg">
+        <item name="android:textColorHint">@color/instagram_font_color</item>
+    </style>
+
+    <style name="instagram_bg" parent="parent">
+        <item name="android:padding">@dimen/padding_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@drawable/instagram_et_bg</item>
+    </style>
+
+    <style name="instagram_button" parent="parent">
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:background">@drawable/instagram_button_bg</item>
+        <item name="android:textColor">@color/instagram_font_color</item>
+        <item name="android:textSize">@dimen/font_size</item>
+    </style>
+
+    <style name="instagram_text" parent="viewParent">
+        <item name="android:textColor">@color/instagram_font_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="instagram_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/instagram_font_color</item>
+    </style>
+</resources>

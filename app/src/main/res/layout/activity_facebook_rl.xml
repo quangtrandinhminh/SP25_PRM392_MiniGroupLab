@@ -1,0 +1,94 @@
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    style="@style/facebook_screenParent">
+
+    <!-- Logo -->
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        style="@style/facebook_logo"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="25dp" />
+
+    <TextView
+        android:id="@+id/tvLanguage"
+        style="@style/facebook_language_tv"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        android:layout_below="@id/imgLogo"
+        android:layout_toStartOf="@id/view"
+        android:text="@string/language" />
+
+    <View
+        android:id="@+id/view"
+        style="@style/facebook_view"
+        android:layout_below="@id/imgLogo"
+        android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginBottom="@dimen/spacing_xlarge"
+        />
+
+    <TextView
+        android:id="@+id/tvChange"
+        style="@style/viewParent"
+        android:layout_below="@id/imgLogo"
+        android:layout_toEndOf="@id/view"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        android:textColor="@color/white"
+        android:text="@string/change_language" />
+
+    <EditText
+        android:id="@+id/etEmailOrPhone"
+        style="@style/facebook_input"
+        android:hint="@string/email_or_phone"
+        android:layout_below="@id/view"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        />
+
+    <!-- Nhập mật khẩu -->
+    <EditText
+        android:id="@+id/etPassword"
+        style="@style/facebook_input"
+        android:hint="@string/password"
+        android:layout_below="@id/etEmailOrPhone"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        android:layout_centerInParent="true"
+        />
+
+    <!-- Nút đăng nhập -->
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/facebook_btn"
+        android:layout_below="@id/etPassword"
+        android:layout_marginTop="30dp"
+        android:padding="@dimen/padding_small"
+        android:layout_marginHorizontal="@dimen/spacing_large"
+        android:text="@string/login" />
+
+    <!-- Đăng ký tài khoản -->
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:text="@string/facebook_sign_up"
+        style="@style/facebook_label"
+        android:layout_below="@id/btnLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp" />
+
+    <!-- Quên mật khẩu -->
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:text="@string/forgot_password"
+        style="@style/facebook_label"
+        android:layout_below="@id/tvSignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- Biểu tượng trợ giúp -->
+    <ImageView
+        android:id="@+id/imgHelpIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_help_outline"
+        android:layout_alignTop="@id/tvForgotPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp" />
+</android.widget.RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    style="@style/facebook_screenParent"
+    tools:context=".FacebookActivity_CL">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        style="@style/facebook_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        android:layout_marginBottom="25dp"
+        />
+
+    <TextView
+        android:id="@+id/tvLanguage"
+        style="@style/facebook_language_tv"
+        android:text="@string/language"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        android:textColor="@color/facebook_font_color"
+        app:layout_constraintEnd_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        />
+
+    <View
+        android:id="@+id/view"
+        style="@style/facebook_view"
+        app:layout_constraintBottom_toTopOf="@id/etEmailOrPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/spacing_xlarge"
+        />
+
+    <TextView
+        android:id="@+id/tvChange"
+        style="@style/facebook_language_tv"
+        android:text="@string/change_language"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        />
+
+    <EditText
+        android:id="@+id/etEmailOrPhone"
+        style="@style/facebook_input"
+        android:layout_width="0dp"
+        android:hint="@string/email_or_phone"
+        android:layout_marginBottom="@dimen/spacing_small"
+        app:layout_constraintBottom_toTopOf="@id/etPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.84"
+        />
+
+    <EditText
+        android:id="@+id/etPassword"
+        style="@style/facebook_input"
+        android:layout_width="0dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.84"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/facebook_btn"
+        android:layout_width="0dp"
+        android:text="@string/login"
+        android:layout_marginTop="@dimen/spacing_medium"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.84"
+        />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:text="@string/facebook_sign_up"
+        style="@style/facebook_tv"
+        android:layout_marginTop="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        android:text="@string/forgot_password"
+        style="@style/facebook_tv"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignUp" />
+
+    <ImageView
+        android:id="@+id/imgHelpIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_help_outline"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/tvForgotPassword"
+        app:layout_constraintTop_toTopOf="@id/tvForgotPassword"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
