@@ -1,5 +1,6 @@
 package quangtdm.example.lab1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,8 +13,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class FacebookActivity_CL extends AppCompatActivity {
-    private final String USER_NAME = "Quang TDM";
-    private final String PASSWORD = "123";
+    private final String USER_NAME = "quangtdm";
+    //private final String PASSWORD = "123";
     private EditText etEmailOrPhone;
     private EditText etPassword;
     private Button btnLogin;
@@ -44,13 +45,27 @@ public class FacebookActivity_CL extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
     }
 
-    public void login(EditText etEmailOrPhone, EditText etPassword) {
+    private void login(EditText etEmailOrPhone, EditText etPassword) {
         String userName = etEmailOrPhone.getText().toString();
         String password = etPassword.getText().toString();
-        if (userName.equals(USER_NAME) && password.equals(PASSWORD)) {
-            Toast.makeText(this, "Login success", Toast.LENGTH_SHORT).show();
+        if (userName.equalsIgnoreCase(USER_NAME)) {
+            showToast("Login success");
+            Intent homeIntent = new Intent(this, HomeActivity.class);
+            homeIntent.putExtra("USER_NAME", USER_NAME);
+            startActivity(homeIntent);
         } else {
-            Toast.makeText(this, "Login failed", Toast.LENGTH_SHORT).show();
+            showToast("Login failed");
         }
+    }
+
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        etEmailOrPhone.setText("");
+        etPassword.setText("");
     }
 }
